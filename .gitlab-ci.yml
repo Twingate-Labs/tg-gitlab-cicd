@@ -10,7 +10,7 @@ job1:
   script: |
     # install
     apt update -yq
-    apt install -yq ca-certificates curl
+    apt install -yq ca-certificates
     echo "deb [trusted=yes] https://packages.twingate.com/apt/ /" | tee /etc/apt/sources.list.d/twingate.list
     apt update -yq
     apt install -yq twingate
@@ -21,6 +21,7 @@ job1:
 job2:
   stage: test
   script: |
+    apt install -yq ca-certificates curl
     # test protected resource
     curl -v -m 10 "http://172.30.2.229:3000" > /dev/null
     # test public resource
