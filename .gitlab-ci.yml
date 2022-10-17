@@ -3,7 +3,6 @@ image: ubuntu:latest
 before_script:
     - apt update -yq
     - apt install -yq ca-certificates curl
-    - apt list --installed
 
 test:
   stage: build
