@@ -3,6 +3,8 @@ stages:
   - test
   - stop
 
+image: ubuntu:latest
+
 job1:
   stage: build
   script: |
