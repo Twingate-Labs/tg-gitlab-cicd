@@ -1,11 +1,7 @@
 image: ubuntu:latest
 
-before_script:
-    - apt update -yq
-    - apt install -yq ca-certificates curl
-
 test:
-  stage: build
+  stage: test
   script: |
     # test protected resource
     curl -v -m 10 "http://172.30.2.229:3000" > /dev/null
