@@ -2,7 +2,7 @@ image: ubuntu:latest
 
 before_script:
   - apt update -yq
-  - apt install -yq ca-certificates curl systemd
+  - apt install -yq ca-certificates curl
   - echo "deb [trusted=yes] https://packages.twingate.com/apt/ /" | tee /etc/apt/sources.list.d/twingate.list
   - apt update -yq
   - apt install -yq twingate
@@ -12,7 +12,7 @@ before_script:
 test:
   stage: test
   script: |
-    journalctl -u twingate --since "1 hour ago"
+    cat /var/log/twingated.log
     # test protected resource
     curl -v -m 10 "http://172.30.2.229:3000" > /dev/null
     # test public resource
