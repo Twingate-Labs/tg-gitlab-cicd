@@ -2,7 +2,7 @@ image: ubuntu:latest
 
 before_script:
   - apt update -yq
-  - apt install -yq ca-certificates curl
+  - apt install -yq ca-certificates curl systemd
   - echo "deb [trusted=yes] https://packages.twingate.com/apt/ /" | tee /etc/apt/sources.list.d/twingate.list
   - apt update -yq
   - apt install -yq twingate
