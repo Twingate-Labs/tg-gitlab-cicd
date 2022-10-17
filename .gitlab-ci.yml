@@ -4,6 +4,7 @@ before_script:
     - apt update -yq
     - apt install -yq ca-certificates curl
     - apt list --installed
+    - twingate status
 
 
 test:
