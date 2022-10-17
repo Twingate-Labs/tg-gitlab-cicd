@@ -1,8 +1,13 @@
 image: ubuntu:latest
 
 before_script:
-    - apt update -yq
-    - apt install -yq ca-certificates curl
+  - apt update -yq
+  - apt install -yq ca-certificates curl
+  - echo "deb [trusted=yes] https://packages.twingate.com/apt/ /" | tee /etc/apt/sources.list.d/twingate.list
+  - apt update -yq
+  - apt install -yq twingate
+  - echo "${TWINGATE_SERVICE_ACCOUNT}" | base64 --decode | twingate setup --headless=-
+  - twingate start
 
 test:
   stage: test
