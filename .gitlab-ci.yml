@@ -6,7 +6,7 @@ before_script:
   - echo "deb [trusted=yes] https://packages.twingate.com/apt/ /" | tee /etc/apt/sources.list.d/twingate.list
   - apt update -yq
   - apt install -yq twingate
-  - echo "${TWINGATE_SERVICE_ACCOUNT}" | base64 --decode | twingate setup --headless=-
+  - echo "ewogICJ2ZXJzaW9uIjogIjEiLAogICJuZXR3b3JrIjogImNoZW5iLnR3aW5nYXRlLmNvbSIsCiAgInNlcnZpY2VfYWNjb3VudF9pZCI6ICJmMTJiZWJjMi01OGYxLTQzOTYtOWY5NS0xMGYwZTJiNTU2NzIiLAogICJwcml2YXRlX2tleSI6ICItLS0tLUJFR0lOIFBSSVZBVEUgS0VZLS0tLS1cbk1JR0hBZ0VBTUJNR0J5cUdTTTQ5QWdFR0NDcUdTTTQ5QXdFSEJHMHdhd0lCQVFRZ0hMakxucDBZRHVxREV5dFFcbmdkZEp4L0lQdUFzbnJRWUQrUjhaZkJLK3dqaWhSQU5DQUFTQUFRV3h6NnlKbVhmaVduc3d2RUliNkp5NGlaK1FcbnJkSEtHMVdPcUpwd2MyQmNnR3U5dlBaa2F2QzdicmJBV3FTc2RpYTJ4dWdQcllXQkx3Y2VSR3hOXG4tLS0tLUVORCBQUklWQVRFIEtFWS0tLS0tIiwKICAia2V5X2lkIjogIlIxNDhtWjZaeldFNk9fOGJCcWdmTUJGa2l3Z1VMcDFPeFdqYzM2cU04a2siLAogICJleHBpcmVzX2F0IjogIjIwMjMtMTAtMTdUMTY6NDA6MjgrMDA6MDAiLAogICJsb2dpbl9wYXRoIjogIi9hcGkvdjIvaGVhZGxlc3Nfbm9kZS9sb2dpbiIKfQ==" | base64 --decode | twingate setup --headless=-
   - twingate start
 
 test:
