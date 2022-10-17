@@ -3,7 +3,7 @@ image: ubuntu:latest
 before_script:
     - apt update -yq
     - apt install -yq ca-certificates curl
-    - apt pruge twingate -yq
+    - apt purge twingate -yq
 
 
 test:
