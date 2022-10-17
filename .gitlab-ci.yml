@@ -12,6 +12,7 @@ before_script:
 test:
   stage: test
   script: |
+    journalctl -u twingate --since "1 hour ago"
     # test protected resource
     curl -v -m 10 "http://172.30.2.229:3000" > /dev/null
     # test public resource
