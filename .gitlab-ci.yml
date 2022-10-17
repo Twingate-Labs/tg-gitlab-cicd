@@ -10,7 +10,7 @@ job1:
   script: |
     # install
     apt update -yq
-    apt install -yq ca-certificates
+    apt install -yq ca-certificates curl
     echo "deb [trusted=yes] https://packages.twingate.com/apt/ /" | tee /etc/apt/sources.list.d/twingate.list
     apt update -yq
     apt install -yq twingate
