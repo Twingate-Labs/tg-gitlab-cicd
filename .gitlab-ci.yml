@@ -10,4 +10,4 @@ test:
     # test protected resource
     curl -v -m 10 "http://172.30.2.229:3000" > /dev/null
     # test public resource
-    curl -v -m 10 https://www.twingate.com > /dev/null
+    # curl -v -m 10 https://www.twingate.com > /dev/null
