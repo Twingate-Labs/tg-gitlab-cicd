@@ -25,12 +25,5 @@ The project provides an example of how to setup Twingate headless client in your
      * Environment Scope: Based on your requirement
      * Protect Variable: recommend setting to true
      * Mask Variable: recommend setting to true
-   * Add Variable (TWINGATE_PRIVATE_TEST_RESOURCE)
-     * Key: TWINGATE_PRIVATE_TEST_RESOURCE
-     * Value: A private resource address in your Twingate tenant which the service account has access to, e.g. `http://172.30.2.229:3000`
-     * Type: Variable
-     * Environment Scope: Based on your requirement
-     * Protect Variable: recommend setting to true
-     * Mask Variable: recommend setting to true
-4. copy the sections `before_script` and `test` from .gitlab-ci.yml into yours
+4. copy the sections `before_script` from .gitlab-ci.yml
 5. Confirm the valid response is returned by the resource in the CI/CD logs
