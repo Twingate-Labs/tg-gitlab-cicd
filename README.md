@@ -27,3 +27,6 @@ The project provides an example of how to setup Twingate headless client in your
      * Mask Variable: recommend setting to true
 4. Copy the sections `before_script` from `.gitlab-ci.yml`
 5. Confirm the valid response is returned by the resource in the CI/CD logs
+
+## Note
+If you are running your own Gitlab Runner, the [privileged mode](https://docs.gitlab.com/runner/executors/docker.html#use-docker-in-docker-with-privileged-mode) is required.
