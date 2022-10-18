@@ -33,4 +33,4 @@ The project provides an example of how to setup Twingate headless client in your
      * Protect Variable: recommend setting to true
      * Mask Variable: recommend setting to true
 4. copy the sections `before_script` and `test` from .gitlab-ci.yml into yours
-5. 
+5. Confirm the valid response is returned by the resource in the CI/CD logs
