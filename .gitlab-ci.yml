@@ -12,6 +12,6 @@ before_script:
 test:
   stage: test
   script: |
-    # cat /var/log/twingated.log used for debug
+    # cat /var/log/twingated.log uncomment for debug
     # test protected resource
     curl -v -m 10 "$TWINGATE_PRIVATE_TEST_RESOURCE" > /dev/null
