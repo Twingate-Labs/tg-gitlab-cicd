@@ -6,7 +6,7 @@ before_script:
   - echo "deb [trusted=yes] https://packages.twingate.com/apt/ /" | tee /etc/apt/sources.list.d/twingate.list
   - apt update -yq
   - apt install -yq twingate
-  - echo "${TWINGATE_SERVICE_ACCOUNT}" | base64 --decode | twingate setup --headless=-
+  - echo "$TWINGATE_SERVICE_ACCOUNT" | base64 --decode | twingate setup --headless=-
   - twingate start
 
 test:
