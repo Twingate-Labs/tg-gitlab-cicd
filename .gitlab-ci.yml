@@ -14,4 +14,4 @@ test:
   script: |
     cat /var/log/twingated.log
     # test protected resource
-    curl -v -m 10 "$TWINGATE_PRIVATE_TEST_RESOURCE" > /dev/null
+    curl -v -m 10 $TWINGATE_PRIVATE_TEST_RESOURCE > /dev/null
