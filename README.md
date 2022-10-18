@@ -1,5 +1,5 @@
-# Twingate Gitlab Pipeline CICD
-The project provides an example of how to setup Twingate headless client in your Gitlab CICD Pipeline.
+# Twingate Gitlab Pipeline CI/CD
+The project provides an example of how to setup Twingate headless client in your Gitlab CI/CD Pipeline.
 
 ## Setup
 1. Create [Twingate service account key](https://www.twingate.com/docs/services/) and assign resources to the service account based on your requirement
@@ -25,5 +25,5 @@ The project provides an example of how to setup Twingate headless client in your
      * Environment Scope: Based on your requirement
      * Protect Variable: recommend setting to true
      * Mask Variable: recommend setting to true
-4. copy the sections `before_script` from .gitlab-ci.yml
+4. Copy the sections `before_script` from `.gitlab-ci.yml`
 5. Confirm the valid response is returned by the resource in the CI/CD logs
